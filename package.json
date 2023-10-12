@@ -1,0 +1,16 @@
+{
+  "name": "js-test",
+  "version": "1.0.0",
+  "main": "crud.js",
+  "scripts": {
+    "start": "node ./js/crud.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "BGal23",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "validator": "^13.11.0"
+  }
+}

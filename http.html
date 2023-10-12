@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeJS Test</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <a href="./index.html">Go back!</a>
+    <h1>HTTP Test</h1>
+    <form>
+        <p>Choose your folder</p>
+        <input class="find__folder" list="JSONPlacefolder">
+        <datalist id="JSONPlacefolder">
+            <option>post</option>
+            <option>comments</option>
+            <option>albums</option>
+            <option>photos</option>
+            <option>todos</option>
+            <option>users</option>
+        </datalist>
+        <p>Choose how many things you want to see</p>
+        <input class="find__number" type="number">
+        <p>Choose your grup</p>
+        <input class="find__grup" type="number">
+    </form>
+</br>
+    <button type="button" class="http__button">Search</button>
+</br></br>
+    <div class="http__box"></div>
+    <script src="./js/http.js"></script>
+</body>
+</html>

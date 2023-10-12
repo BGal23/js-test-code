@@ -1,0 +1,17 @@
+.box {
+    color: red;
+}
+
+.box2 {
+    color: blue;
+}
+
+.http__box{
+    color:blueviolet;
+}
+
+.class__box {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px
+}
