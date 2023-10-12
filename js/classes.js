@@ -26,15 +26,24 @@ const newUser = () => {
         alert("Sorry, you must enter all data")
     }
     else {
+        let userID = 1;
+        usersList.forEach(check => {
+            if (check.id === userID) {
+                userID++
+            }
+            else {
+                userID
+            }
+        })
         const user = new User ({
-            id: usersList.length + 1,
+            id: userID,
             name: input[0].value,
             email: input[1].value,
             phone: input[2].value
         })
         usersList.push(user)
         localStorage.setItem("users-list", JSON.stringify(usersList))
-        //user.hello()
+        user.hello()
     }   
 }
 
@@ -53,6 +62,10 @@ const selectUser = () => {
 }
 
 const editUser = () => {
+    if (!input[4].value || !input[5].value || !input[6].value) {
+        alert("Sorry, we don't have this user")
+    }
+    else {
     let id = Number(input[3].value)
     usersList.splice(id - 1, 1)
     
@@ -65,7 +78,7 @@ const editUser = () => {
 
     usersList.push(editUser)
     localStorage.setItem("users-list", JSON.stringify(usersList))
-}
+}}
 
 const deleteUser = () => {
     let id = Number(input[3].value)
