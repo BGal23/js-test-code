@@ -16,8 +16,12 @@ class User {
         this.phone = phone
     }
 
-    hello() {
+    new() {
         alert(`You have new user ${this.name}`)
+    }
+
+    edit() {
+        alert(`You edit the user ${this.name}`)
     }
 }
 
@@ -43,7 +47,7 @@ const newUser = () => {
         })
         usersList.push(user)
         localStorage.setItem("users-list", JSON.stringify(usersList))
-        user.hello()
+        return user.new()
     }   
 }
 
@@ -59,6 +63,7 @@ const selectUser = () => {
         input[5].value = user.email
         input[6].value = user.phone
     }
+    return
 }
 
 const editUser = () => {
@@ -78,12 +83,14 @@ const editUser = () => {
 
     usersList.push(editUser)
     localStorage.setItem("users-list", JSON.stringify(usersList))
+    return editUser.edit()
 }}
 
 const deleteUser = () => {
     let id = Number(input[3].value)
     usersList.splice(id - 1, 1)
     localStorage.setItem("users-list", JSON.stringify(usersList))
+    return
 }
 
 const showUsersList = (usersList) => {
